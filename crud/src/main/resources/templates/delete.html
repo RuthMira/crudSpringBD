@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Deletar Cachorro</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Deletar Cachorro</h1>
+    <p>Tem certeza de que deseja deletar este cachorro?</p>
+    <form action="#" th:action="@{/delete/{id}(id=${cachorro.id})}" method="post">
+        <button type="submit">Deletar</button>
+    </form>
+    <a href="/">Cancelar</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cachorros</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Lista de Cachorros</h1>
+    <a href="/create">Adicionar Novo Cachorro</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Raça</th>
+                <th>Número de Patas</th>
+                <th>Cor do Pelo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cachorro : ${cachorros}">
+                <td th:text="${cachorro.id}">ID</td>
+                <td th:text="${cachorro.raca}">Raça</td>
+                <td th:text="${cachorro.numeroPatas}">Número de Patas</td>
+                <td th:text="${cachorro.corDoPelo}">Cor do Pelo</td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${cachorro.id})}">Editar</a>
+                    <a th:href="@{/delete/{id}(id=${cachorro.id})}">Deletar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

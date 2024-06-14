@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Cachorro</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Editar Cachorro</h1>
+    <form action="#" th:action="@{/update/{id}(id=${cachorro.id})}" th:object="${cachorro}" method="post">
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" th:field="*{raca}" required>
+        
+        <label for="numeroPatas">Número de Patas:</label>
+        <input type="number" id="numeroPatas" th:field="*{numeroPatas}" required>
+        
+        <label for="corDoPelo">Cor do Pelo:</label>
+        <input type="text" id="corDoPelo" th:field="*{corDoPelo}" required>
+        
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>
+
