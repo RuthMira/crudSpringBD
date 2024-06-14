@@ -1,7 +1,5 @@
-Claro! Abaixo está um exemplo de como você pode estruturar um arquivo `README.md` para o seu repositório do Spring Boot CRUD:
+Repositório do Spring Boot CRUD:
 
-```markdown
-# Spring Boot CRUD Example
 
 Este é um exemplo simples de uma aplicação CRUD (Create, Read, Update, Delete) usando Spring Boot e MySQL.
 
